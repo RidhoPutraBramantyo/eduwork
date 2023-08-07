@@ -44,9 +44,9 @@ function startGame() {
     }
 
     alert(
-      "Skor saat ini:<br>Player 1: " +
+      "Skor saat ini:\nPlayer 1: " +
         player1Score +
-        "<br>Player 2: " +
+        "\nPlayer 2: " +
         player2Score
     );
 
