@@ -50,7 +50,6 @@ const users = [
   },
 ];
 
-// mengakses data user
 const targetId = 2;
 
 const user = users.find((user) => user.id === targetId);
