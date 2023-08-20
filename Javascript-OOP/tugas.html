@@ -14,6 +14,19 @@
       <div id="kontainer-tabel"></div>
     </div>
     <script>
+      //
+      // tugas==================================================================================================
+      class TabelSederhana2 {
+        constructor(data, kolom) {
+          this.data2 = data;
+          this.kolom2 = kolom;
+        }
+        buatTabel() {}
+      }
+      let table = new TabelSederhana2(data, kolom);
+      table.buatTabel();
+      //====================================================================================================
+
       const TabelSederhana = (function () {
         function buatTabel(data, kolom) {
           const kontainerTabel = document.getElementById("kontainer-tabel");
