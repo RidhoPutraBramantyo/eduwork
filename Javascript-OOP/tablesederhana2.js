@@ -3,18 +3,26 @@ class TabelSederhana2 {
     this.data2 = data;
     this.kolom2 = kolom;
   }
-  buatDiv() {
-    let open = "<div>";
-    let close = "</div>";
+
+  buatTabel() {
+    let tableContent = `<table class="table table-bordered"><thead><tr>`;
+
+    this.kolom2.forEach((kolomItem) => {
+      tableContent += `<th>${kolomItem}</th>`;
+    });
+
+    tableContent += `</tr></thead><tbody>`;
+
+    this.data2.forEach((dataItem) => {
+      tableContent += `<tr>`;
+      this.kolom2.forEach((kolomItem) => {
+        tableContent += `<td>${dataItem[kolomItem]}</td>`;
+      });
+      tableContent += `</tr>`;
+    });
+
+    tableContent += `</tbody></table>`;
+    return tableContent;
   }
 }
-
-let arrData = [
-  { nama: "haryo", umur: 27 },
-  { nama: "chris", umur: 27 },
-  { nama: "sandi", umur: 27 },
-  { nama: "haryo", umur: 27 },
-];
-let obj = arrData[0];
-
-console.log(arrData[0].nama + ", " + arrData[0].umur);
+export default TabelSederhana2;
