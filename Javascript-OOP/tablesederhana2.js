@@ -25,4 +25,5 @@ class TabelSederhana2 {
     return tableContent;
   }
 }
-export default TabelSederhana2;
+
+export { TabelSederhana2 }; // Named Export
