@@ -15,11 +15,10 @@ class Table {
   buatTabel() {
     let tableContent = `<table class="table table-bordered"><thead><tr>`;
 
-    // Loop melalui kolom yang diinginkan
     this.kolomYangDiinginkan.forEach((kolomItem) => {
       tableContent += `<th>${
         kolomItem.charAt(0).toUpperCase() + kolomItem.slice(1)
-      }</th>`; // Mengubah huruf pertama menjadi kapital
+      }</th>`;
     });
 
     tableContent += `</tr></thead><tbody>`;
@@ -27,16 +26,12 @@ class Table {
     this.data2.forEach((dataItem) => {
       tableContent += `<tr>`;
 
-      // Loop melalui kolom yang diinginkan
       this.kolomYangDiinginkan.forEach((kolomItem) => {
         if (kolomItem === "address") {
-          // Jika kolom adalah "address," ambil properti street dan city
           tableContent += `<td>${dataItem.address.street}, ${dataItem.address.city}</td>`;
         } else if (kolomItem === "company") {
-          // Jika kolom adalah "company," ambil properti name
           tableContent += `<td>${dataItem.company.name}</td>`;
         } else {
-          // Jika bukan "address" atau "company," tampilkan isi kolom biasa
           tableContent += `<td>${dataItem[kolomItem]}</td>`;
         }
       });
@@ -48,4 +43,4 @@ class Table {
   }
 }
 
-export { Table }; // Named Export
+export { Table };
