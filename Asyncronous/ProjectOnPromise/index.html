@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">New App</span>
+      </div>
+    </nav>
+
+    <!-- Card -->
+    <div class="container">
+      <div class="row grid gap-3">
+        <!-- Script -->
+        <script>
+          let data = ["data 1", "data 2", "data 3", "data 4"];
+          let container = document.querySelector(".row");
+
+          for (let i = 0; i < data.length; i++) {
+            const element = data[i];
+            let cardHTML = `
+              <div class="col-md-3 p-2 g-col-6">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    class="card-img-top"
+                    alt="Placeholder"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">${element}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            `;
+
+            container.innerHTML += cardHTML;
+          }
+        </script>
+        <!-- End of Script -->
+      </div>
+    </div>
+
+    <!--vvv Bootstrap js vvv-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!--^^^ Bootstrap js^^^-->
+  </body>
+</html>
