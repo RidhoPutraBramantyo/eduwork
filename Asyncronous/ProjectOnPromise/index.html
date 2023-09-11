@@ -22,32 +22,7 @@
     <div class="container">
       <div class="row grid gap-3">
         <!-- Script -->
-        <script>
-          let data = ["data 1", "data 2", "data 3", "data 4"];
-          let container = document.querySelector(".row");
-
-          for (let i = 0; i < data.length; i++) {
-            const element = data[i];
-            let cardHTML = `
-              <div class="col-md-3 p-2 g-col-6">
-                <div class="card" style="width: 18rem">
-                  <img
-                    src="https://via.placeholder.com/150"
-                    class="card-img-top"
-                    alt="Placeholder"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">${element}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            `;
-
-            container.innerHTML += cardHTML;
-          }
-        </script>
+        <script src="script.js"></script>
         <!-- End of Script -->
       </div>
     </div>
