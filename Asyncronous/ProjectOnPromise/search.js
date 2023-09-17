@@ -1,8 +1,6 @@
 const navbarSearchInput = document.getElementById("navbarSearchInput");
 
-const navbarSearchButton = document.getElementById("navbarSearchButton");
-
-navbarSearchButton.addEventListener("click", function () {
+navbarSearchButton.addEventListener("input", function () {
   const searchValue = navbarSearchInput.value.toLowerCase();
 
   const filteredData = jsonData.articles.filter((article) => {
