@@ -3,12 +3,12 @@ const navbarSearchInput = document.getElementById("navbarSearchInput");
 navbarSearchButton.addEventListener("input", function () {
   const searchValue = navbarSearchInput.value.toLowerCase();
 
-  const filteredData = jsonData.articles.filter((article) => {
+  const filteredData = articlesData.filter((article) => {
     return article.title.toLowerCase().includes(searchValue);
   });
 
-  let container = document.getElementById("newsContainer");
   container.innerHTML = "";
+  console.log(searchValue);
 
-  createCard2(filteredData);
+  // createCard2(filteredData);
 });
