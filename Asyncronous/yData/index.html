@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pencarian Dinamis</title>
+  </head>
+  <body>
+    <h1>Pencarian Dinamis</h1>
+
+    <input type="text" id="searchInput" placeholder="Ketik kata kunci" />
+
+    <ul id="results">
+      <!-- Hasil pencarian akan ditampilkan di sini -->
+    </ul>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const resultsList = document.getElementById("results");
+
+      // Data contoh untuk pencarian
+
+      const data = [
+        "Apel",
+        "Jeruk",
+        "Mangga",
+        "Pisang",
+        "Semangka",
+        "Strawberi",
+        "Anggur",
+      ];
+
+      // Fungsi untuk menampilkan data awal
+      function displayDefaultResults() {
+        resultsList.innerHTML = "";
+        data.forEach((item) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = item;
+          resultsList.appendChild(listItem);
+        });
+      }
+
+      // Fungsi untuk melakukan pencarian
+      function search() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredResults = data.filter((item) =>
+          item.toLowerCase().includes(searchTerm)
+        );
+        displayResults(filteredResults);
+      }
+
+      // Fungsi untuk menampilkan hasil pencarian
+      function displayResults(results) {
+        resultsList.innerHTML = "";
+        results.forEach((result) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = result;
+          resultsList.appendChild(listItem);
+        });
+      }
+
+      // Tampilkan data awal saat halaman pertama kali dimuat
+      displayDefaultResults();
+
+      // Menjalankan pencarian saat pengguna mengetik
+      searchInput.addEventListener("input", search);
+    </script>
+  </body>
+</html>
